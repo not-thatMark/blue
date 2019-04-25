@@ -17,7 +17,9 @@ const routes: Routes = [
   },
   { path: 'terms', loadChildren: './terms/terms.module#TermsPageModule' },
   { path: 'register', loadChildren: './register/register.module#RegisterPageModule' },
-  { path: 'privacy', loadChildren: './privacy/privacy.module#PrivacyPageModule' }
+  { path: 'privacy', loadChildren: './privacy/privacy.module#PrivacyPageModule' },
+  { path: 'login', loadChildren: './login/login.module#LoginPageModule' },
+  { path: 'social', loadChildren: './social/social.module#SocialPageModule' }
 ];
 
 @NgModule({

@@ -12,13 +12,13 @@ import {FirebaseUIModule, firebase, firebaseui} from 'firebaseui-angular';
 import {AngularFireModule} from '@angular/fire';
 import {AngularFireAuthModule, AngularFireAuth} from '@angular/fire/auth';
 import { environment } from 'src/environments/environment';
-
+import { HttpModule } from '@angular/http';
 const firebaseUiAuthConfig: firebaseui.auth.Config = {
   signInFlow: 'popup',
   signInOptions: [
     firebase.auth.GoogleAuthProvider.PROVIDER_ID,
-    firebase.auth.EmailAuthProvider.PROVIDER_ID
-    
+    firebase.auth.FacebookAuthProvider.PROVIDER_ID,
+    firebase.auth.TwitterAuthProvider.PROVIDER_ID
   ],
   tosUrl: '/terms',
   privacyPolicyUrl: '/privacy',
@@ -30,6 +30,7 @@ const firebaseUiAuthConfig: firebaseui.auth.Config = {
   imports: [
     BrowserModule,
     IonicModule.forRoot(),
+    HttpModule,
     AppRoutingModule,
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireAuthModule,

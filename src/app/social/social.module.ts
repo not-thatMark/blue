@@ -1,15 +1,16 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { FormsModule } from '@angular/forms';
 import { Routes, RouterModule } from '@angular/router';
 
 import { IonicModule } from '@ionic/angular';
+import { FirebaseUIModule } from 'firebaseui-angular';
+import { SocialPage } from './social.page';
 
-import { RegisterPage } from './register.page';
 const routes: Routes = [
   {
     path: '',
-    component: RegisterPage
+    component: SocialPage
   }
 ];
 
@@ -18,9 +19,9 @@ const routes: Routes = [
     CommonModule,
     FormsModule,
     IonicModule,
-    RouterModule.forChild(routes), 
-    ReactiveFormsModule
+    FirebaseUIModule,
+    RouterModule.forChild(routes)
   ],
-  declarations: [RegisterPage]
+  declarations: [SocialPage]
 })
-export class RegisterPageModule {}
+export class SocialPageModule {}
